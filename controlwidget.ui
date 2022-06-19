@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ControlWidget</class>
+ <widget class="QWidget" name="ControlWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>576</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ControlWidget</string>
+  </property>
+  <widget class="QPushButton" name="startProcessor">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>0</y>
+     <width>100</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RUN</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R0_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R0">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>321</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R1_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R1">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>60</y>
+     <width>321</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R2_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>90</y>
+     <width>321</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R3_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="R3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>120</y>
+     <width>321</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="RAM_VIEWER">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>200</y>
+     <width>241</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu Mono</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PC_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PC</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PC">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>160</y>
+     <width>321</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="compileProcessor">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>100</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>COMPILE</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="velocitySlider">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>20</y>
+     <width>61</width>
+     <height>160</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>100</number>
+   </property>
+   <property name="maximum">
+    <number>3000</number>
+   </property>
+   <property name="singleStep">
+    <number>100</number>
+   </property>
+   <property name="pageStep">
+    <number>100</number>
+   </property>
+   <property name="tracking">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SPEED">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>20</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>100</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RESET">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>0</y>
+     <width>100</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RESET</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
