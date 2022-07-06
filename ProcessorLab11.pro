@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         controlwidget.cpp \
-    processor.cpp
+    processor.cpp \
+    debugger.cpp
 
 HEADERS += \
         controlwidget.h \
-    processor.h
+    processor.h \
+    debugger.h
 
 FORMS += \
         controlwidget.ui

@@ -1,20 +1,14 @@
-#ifndef PROCESSOR_H
-#define PROCESSOR_H
+#ifndef DEBUGGER_H
+#define DEBUGGER_H
 
-#define RAM_SIZE 128
-#define REG_COUNT 4
-#include <QObject>
+#include <QWidget>
+#include <QListWidget>
+#include "processor.h"
 
 
-
-class Processor: public QObject
+class Debugger
 {
-    Q_OBJECT
-    //    unsigned short RAM[RAM_SIZE];
-    //    unsigned short REG[REG_COUNT];
-    //    unsigned short PC = 0;
-    //    unsigned short IR = 0;
-
+private:
     enum OP_CODES{
         NOP = 0x0000,
         STOP = 0x00FF,
@@ -58,8 +52,6 @@ class Processor: public QObject
 
 
     };
-
-
     enum class MOV_TYPES{
         REGISTER_TO_REGISTER = 0,
         NUMBER_TO_REGISTER = 1,
@@ -80,42 +72,11 @@ class Processor: public QObject
     };
 
 public:
-    Processor();
+    Debugger();
 
-public:
-    unsigned short RAM[RAM_SIZE];
-    unsigned short REG[REG_COUNT];
-    unsigned short PC = 0;
-    unsigned short IR = 0;
-    unsigned short PS = 0;
-    unsigned short SP = 256;
-
-    bool isRunning =  false;
-
-
-    unsigned short processor_readRAM();
-    void loop();
-    void step(bool *isRunning);
-    void writeRAM(unsigned short * DATA);
-    void reset();
-    void resetCommand();
-    unsigned char getOPType(unsigned char OP1, unsigned char OP2);
-    unsigned char getOPType_single(unsigned char OP);
-
-
-
-signals:
-    void dataChanged();
-    void evokeException(QString msg);
-    void colorPixel(quint16 pos, quint16 color);
-
-public slots:
-    void onStep();
-
+    void update(Processor* CPU, QListWidget* LIST);
+    int getOPType(unsigned char OP1, unsigned char OP2);
+    int getOPType(unsigned char OP);
 };
 
-
-
-
-
-#endif // PROCESSOR_H
+#endif // DEBUGGER_H

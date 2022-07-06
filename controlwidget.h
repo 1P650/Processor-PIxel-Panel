@@ -26,8 +26,15 @@ private slots:
 
     void on_RESET_clicked();
 
+    void onColorPixel(quint16 pos, quint16 color);
+
+    void on_STOP_clicked();
+
+    void on_STEP_clicked();
+
 signals:
     void doStep();
+
 
 
 
